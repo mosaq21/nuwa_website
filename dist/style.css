@@ -291,19 +291,19 @@ div.bottom-footer {
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
+    display: table;
     align-items: stretch;
     flex-direction: row-reverse;
 }
 .form_contact{
-	width: 50%;
+	width: 30em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: inline-block;
+    display: table-cell;
     flex-wrap: wrap;
-    padding: 56px 55px 63px 55px;
+	padding-left: 4em;
 }
 
 h2{
@@ -330,8 +330,8 @@ h2{
 
 .wpcf7-text, .wpcf7-textarea{
 	width: 100%;
-    margin-bottom: 22px;
-    padding: 17px 19px;
+    margin-bottom: 15px;
+    padding: 13px 19px;
     border: 2px solid transparent;
     outline: 0;
     font-size: 13px;
@@ -350,16 +350,13 @@ h2{
 }
 
 .address_container{
-	width: 50%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: inline-block;
+    display: table-cell;
     flex-wrap: wrap;
-	float: right;
 	
-    padding: 56px 55px 63px 55px;
 }
 .wpcf7-textarea{
 	resize: none;
@@ -367,16 +364,15 @@ h2{
 }
 
 .img_contact{
-		height: 29.5em;
+		height: 24.5em;
 }
 
 
 @media (max-width: 790px) {
 	
 	.img_contact{
-	width:100%;
-				height:auto;
-
+	width:180%;
+	height: auto;
 	padding-top: 2em;
 }
 	.container-contact100 {
@@ -415,9 +411,19 @@ h2{
     display: -ms-flexbox;
     display: inline-block;
     flex-wrap: wrap;
-    padding: 48px 18px 58px 40px;
+    padding: 30px 18px 58px 40px;
 }
 	
+.address_container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: table-cell;
+    flex-wrap: wrap;
+    padding-left: 4em;
+}	
 }
 iframe {
 	border: none !important;
@@ -434,6 +440,19 @@ iframe{
 }
 
 
+.caption {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
 
-
-
+.caption span.container_caption {
+    color: white;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
