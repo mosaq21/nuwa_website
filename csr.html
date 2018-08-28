@@ -16,6 +16,8 @@
 
 <body>
 	<div class="ve-menu">
+	<span class="logo_container">
+								<img class="logo_header" src="../Images/logo_4.ico" alt="logo"></span>
 		<ul class="ve-menu-pc">
 			<li><a href="index.html">HOME</a></li>
 			<li><a href="#">LEARN</a>
@@ -48,14 +50,29 @@
 		});
 
 	</script>
+	<script>
+	
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 50) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});</script>
 	<main>
 
 	
-	<div class="section_banner_hello">
 	<div class="section_banner">
+		<img src="../Images/ats10.jpg" alt="">
 			
 				<h1 class="site-banner_title">NEPAL GREEN TARA FOUNDATION </h1>
-				<h2 class="site-banner_subtitle">"Every charitable act is a stepping stone toward heaven" - Tashi Tenzing</h2>	</div>
+				
 		</div>
 	
 	
@@ -86,6 +103,8 @@
 
 		</div>
 	</main>
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
+
 		<footer class="text_bottom_footer">
 
 			<div class="bottom-footer">

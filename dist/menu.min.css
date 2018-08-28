@@ -49,6 +49,7 @@
 	width: 20px;
 	height: 21px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .ve-menu-icon > div {
@@ -89,7 +90,7 @@
 
 .ve-menu-close > div {
 	float: right;
-	padding: 0 10px;
+	padding: 0 60px;
 }
 
 .ve-menu-close > div:after {
