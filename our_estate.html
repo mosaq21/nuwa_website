@@ -48,20 +48,31 @@
 		});
 
 	</script>
-	<main>
-	<div class="site-banner">
-	<div class="banner_inner"> 
-	<div class="inner_img">	
-	</div>
-	</div>
-	</div>
-	<div class="section_banner_hello">
-	<div class="section_banner">
-			
-				<h1 class="site-banner_title">ABOUT OUR ESTATE</h1>
-				<h2 class="site-banner_subtitle">" The steps and methods we take to prepare our coffee helps develop a deep body and tones of dried fruit and spice in the cup."</h2>	</div>
-		</div>
 	
+<script>
+	
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 50) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});</script>
+
+	<main>
+	
+
+	<div class="container_about_image"> 
+			<img  class = "happy_feet" src="./Images/ats3_1.jpg" alt="pow pow">
+			</div>		
+				<h1 class="site-banner_title">ABOUT OUR ESTATE</h1>
+					
 <div class="about_section">
 
 	
@@ -82,7 +93,7 @@
 		</section>
 		<section>
 
-		<h2 style="color: #000">HOW WE WORK:</h2>
+		<h2 style="color: #666">HOW WE WORK:</h2>
 				</section>
 		<section>
 
@@ -96,6 +107,7 @@
 </div>
 
 </main>
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 <footer class="text_bottom_footer">
 			<div class="bottom-footer">
