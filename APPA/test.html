@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuwa Estate Coffee</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./assests/stylesheet.css">
+<link rel="stylesheet" href="./assests/style.css">
+ 
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav id="navigation"> <a href="#" class="logo">Nuwa Estate</a> <a aria-label="mobile menu" class="nav-toggle"> <span></span> <span></span> <span></span> </a>
+      <ul class="menu-left">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="#rec">About Us</a></li>
+        <li><a href="#about">About Our Coffee</a></li>
+        <li><a href="#blog">CSR</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+<script>
+// back to top 
+$('.logo').on('click', function(e) {
+  e.preventDefault();
+  $('.nav-toggle').removeClass('open');
+  $('.menu-left').removeClass('collapse');
+  $('html, body').animate({
+    scrollTop: 0
+  }, 750, 'easeInOutQuad')
+});
+
+
+// TOGGLE HAMBURGER & COLLAPSE NAV
+$('.nav-toggle').on('click', function() {
+  $(this).toggleClass('open');
+  $('.menu-left').toggleClass('collapse');
+});
+// REMOVE X & COLLAPSE NAV ON ON CLICK
+$('.menu-left a').on('click', function() {
+  $('.nav-toggle').removeClass('open');
+  $('.menu-left').removeClass('collapse');
+});
+
+// SHOW/HIDE NAV
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('show-nav').addClass('hide-nav');
+        $('.nav-toggle').removeClass('open');
+        $('.menu-left').removeClass('collapse');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('hide-nav').addClass('show-nav');
+        }
+    }
+
+    lastScrollTop = st;
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<main>
+<div class="container_image_about_test">
+	
+			
+		<div class="container_home">
+		<h1> About Us</h1>
+		<h5>" The steps and methods we take to prepare our coffee helps develop a deep body and tones of dried fruit and spice in the cup."
+		</h5>	
+		</div>
+</div>
+		
+	<div class="m171">
+	<div class="container_text_about_text"><p>
+Family Owned since 2007, Nuwa Estate specialise in producing and exporting high-grade speciality coffee. Our current agricultural methods, standards and commitment to quality has allowed us to develop products that benefit from a wealth of knowledge and expertise. </p><br>
+<p>
+At first we were solely into yielding and peddling raw coffee, but in time we realized that in Nepal the consumers had become weary of the commercial coffee enterprises and stale, overly roasted beans, which then enticed us to open a roaster for people who were clamoring for the actual taste of fresh coffee. We try our level best to only sell fresh coffee to our buyers, so they may enjoy coffee at peak flavor. We only use the finest, most delicious, and responsibly sourced beans. We are united by the simple purpose of getting great coffee to everyone who asks for it.<br>
+</p>
+<img src="./Images/ats14.jpg" alt="">
+
+<h2>ABOUT THE ESTATE</h2>
+<p>
+Before our inception as a company on our current estate, in the area there were no roads for vehicles to travel on, the infrastructure was very backward and barely visible and there were only dirt tracks to walk on. At a quick glance no one could have imagined that a wholly integrated and functional coffee production estate could be founded in such a derelict location. Nonetheless it is now a reality.
+</p><br>
+<p>
+The high elevation in Nuwakot region contributes to the intense aromatic characteristics of the coffee and the minerals enriched soil provides the support and nourishment required by coffee plants. It comprises of several microclimates, different altitudes and topographies, all enabling the production of exceptional coffee. 
+</p><br>
+<img src="./Images/ats7.jpg" alt="">
+<p>
+
+Nestled in the lush and verdant Nuwakot hills in Northern Nepal, Nuwa Estate boasts of fruit orchards, plentiful rainfall, salubrious temperatures and a variety of spices. This results in a superior coffee that is a testament to the fertile land of its origin. Our beans carry with it stories of the land and people who have cultivated it for over a decade.
+</p><br>
+<p>
+
+Nuwa Estate is located on the gradient hills North-East of Nepal in the district of Nuwakot. Stretching over 25 Hectares at an altitude of 4,500 – 5,000 ft above sea level. As a direct result of the altitude there is less oxygen, which then slows the growth of the coffee plants. Slow growth gives the beans a more concentrated and complex flavor.
+
+		</p>
+
+
+</div>
+</div>
+</main>
+
+ <footer>
+ 	<div class="footer_container">
+ 	<dl>
+ 		<dt class="facebook"><a href="https://www.facebook.com/nuwaestatecoffee/?fb_dtsg_ag=AdxPnFhcpRVIkTKheDIn0lH6oPto5wMIX-MzrHAwU1oy3Q%3AAdwedAC1w2njmHfV3Zaxpe2JGoAqLqwlKFZmJJuIcNrFyw" target="_blank"></a></dt>
+ 		<dt class="instagram"><a href="https://www.instagram.com/nuwaestatecoffee/?hl=en" target="_blank"></a></dt>
+ 	</dl>
+ 	<p>
+ 	<a href="mailto:info@nuwaestatecoffee.com">info@nuwaestatecoffee.com</a><br>
+ 	<a href="tel:0097714374788">
+ 	+977-1-4374788
+ 	</a>
+ 	<br>
+ 	<br>
+ 	Nuwa Estate Coffee Industry Pvt.Ltd
+	<br>
+	PO Box no. 1625<br>
+	Kathmandu, Nepal 
+	<br>
+ 	<a href="https://goo.gl/maps/hXjqBRVrQaq" target="_blank"><b></b> View on map</a>
+ 	</p>
+ 	<small>Powered by caffeine © 2018 Nuwa Estate Coffee</small><br>
+ 	</div>
+ 	
+ 	
+ </footer>
+  
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

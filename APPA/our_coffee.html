@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nuwa Estate Coffee</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./assests/stylesheet.css">
+	<link rel="stylesheet" href="./assests/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<nav id="navigation"> <a href="#" class="logo">Nuwa Estate</a> <a aria-label="mobile menu" class="nav-toggle"> <span></span> <span></span> <span></span> </a>
+				<ul class="menu-left">
+					<li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="our_coffee.html">Our Coffee</a></li>
+        <li><a href="csr.html">CSR</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script>
+		// back to top 
+		$('.logo').on('click', function(e) {
+			e.preventDefault();
+			$('.nav-toggle').removeClass('open');
+			$('.menu-left').removeClass('collapse');
+			$('html, body').animate({
+				scrollTop: 0
+			}, 750, 'easeInOutQuad')
+		});
+
+
+		// TOGGLE HAMBURGER & COLLAPSE NAV
+		$('.nav-toggle').on('click', function() {
+			$(this).toggleClass('open');
+			$('.menu-left').toggleClass('collapse');
+		});
+		// REMOVE X & COLLAPSE NAV ON ON CLICK
+		$('.menu-left a').on('click', function() {
+			$('.nav-toggle').removeClass('open');
+			$('.menu-left').removeClass('collapse');
+		});
+
+		// SHOW/HIDE NAV
+
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event) {
+			didScroll = true;
+		});
+
+		setInterval(function() {
+			if (didScroll) {
+				hasScrolled();
+				didScroll = false;
+			}
+		}, 250);
+
+		function hasScrolled() {
+			var st = $(this).scrollTop();
+
+
+			// If they scrolled down and are past the navbar, add class .nav-up.
+			// This is necessary so you never see what is "behind" the navbar.
+			if (st > lastScrollTop && st > navbarHeight) {
+				// Scroll Down
+				$('header').removeClass('show-nav').addClass('hide-nav');
+				$('.nav-toggle').removeClass('open');
+				$('.menu-left').removeClass('collapse');
+			} else {
+				// Scroll Up
+				if (st + $(window).height() < $(document).height()) {
+					$('header').removeClass('hide-nav').addClass('show-nav');
+				}
+			}
+
+			lastScrollTop = st;
+		}
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36251023-1']);
+		_gaq.push(['_setDomainName', 'jqueryscript.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+	<main>
+		<div class="container_image_1">
+
+			<div class="container_home_1
+">
+				<h1> Our Coffee</h1>
+				
+			</div>
+		</div>
+		<div class="m171">
+			<div class="container_text_about_text">
+				<p>
+					We at Nuwa Estate strictly grow 100% Arabica only.
+					After 4 years of patience and determination both our coffee production and our processing techniques, has finally been certified Organic by International Federation of Organic Agriculture Movements (IFOAM) and Biocert International Pvt. Ltd.</p><br>
+									<img src="./Images/ats9.jpg" alt="">
+
+				<p>
+					We work directly with farmers around Nuwakot region to source the most delicious and sustainable coffees we can find. We then roast them to our exciting flavor standards, and serve them to you at peak deliciousness. Our single origin coffee is handpicked processed and roasted in small batches for greater complexity and maximum flavour.
+				</p><br>
+				<div class="container_coffee_color">
+				<p>
+					Our coffee beans are unrivaled in their intense flavor and aroma, all of which can be credited to its prestigious location, agricultural planning, specialized labour and the diverse florae and fauna growing around the coffee plants. At Nuwa Estate we have embedded more than 70,000 coffee plants, all of which were nurtured in our very own nursery. This way we are certain that what we reap is what we sow.</p></div><br>
+				<img src="./Images/ats8.jpg" alt="">
+
+				<p>
+
+					The shaping of our roast has taken up a lot of our time and expertise to come to. Our roast types have been specially crafted for coffee connoisseurs. It boasts of sublime citric and floral notes with balanced acidity and body while its creamy finish with a sweet aftertaste leaves the palate wanting more. Thanks to a harmonious taste profile of our Arabica beans. Our beans are favoured by international green coffee importers and artisanal roasteries the world over.
+
+				</p>
+
+			</div>
+		</div>
+	</main>
+
+	 <footer>
+ 	<div class="footer_container">
+ 	<dl class="social_media">
+ 	<p> Follow Us</p><br>
+ 		<dt class="facebook"><a href="https://www.facebook.com/nuwaestatecoffee/?fb_dtsg_ag=AdxPnFhcpRVIkTKheDIn0lH6oPto5wMIX-MzrHAwU1oy3Q%3AAdwedAC1w2njmHfV3Zaxpe2JGoAqLqwlKFZmJJuIcNrFyw" target="_blank"> <img src="./Images/a1.svg" alt=""></a></dt>
+ 		<dt class="instagram"><a href="https://www.instagram.com/nuwaestatecoffee/?hl=en" target="_blank"><img src="./Images/a2.svg" alt=""></a></dt>
+ 	</dl>
+ 	<div class="footer_line">
+ 	<p>
+ 	<a href="mailto:info@nuwaestatecoffee.com">info@nuwaestatecoffee.com</a><br>
+ 	<a href="tel:0097714374788">
+ 	+977-1-4374788
+ 	</a>
+ 	<br>
+ 	<br>
+ 	Nuwa Estate Coffee Industry Pvt.Ltd
+	<br>
+	PO Box no. 1625<br>
+	Kathmandu, Nepal 
+	<br>
+ 	<a href="https://goo.gl/maps/hXjqBRVrQaq" target="_blank"><b></b> View on map</a>
+ 	</p>
+ 	</div>
+ 	<small>Powered by caffeine © 2018 Nuwa Estate Coffee</small><br>
+ 	</div>
+ 	
+ 	
+ </footer>
+  
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
