@@ -238,31 +238,47 @@
 
 
 @media only screen and (max-width: 768px)
-	
-	
-{.facebook, .instagram
+		
 {
-	width: 38px;
-	display: block;
-	position: absolute;
-	float: left; 
-	margin: 4px;
-	clear: both
+.facebook, .instagram{
+	display: inline-block;
+    float: left;
+	position: relative;
+    margin-top: -10px;
+    align-items: baseline;
+
 }
-	
-	
-	.social_media dl{
+    
+    .facebook{
+        width: 35px;
+    }
+    
+    .instagram{
+        margin-left: 10px;
+    	width: 32px;
+
+    }	
+.social_media dl{
 	float:left;
-	text-align: left;
+    display: inline-block;
+	text-align: right;
 }
 	
-	footer {
+footer {
+    
     height: 400px !important;
 	padding: 5% 30px;}
+    
+    .footer_line {
+        clear: both;
+    }
 }
+
 footer{
-	
+	width: 100%;
+    background-color: #F5F5F5;
     min-height: 320px;
+    margin-top: 2em;
     padding: 5% 5% 100px;
 	position: relative;}
 
@@ -277,7 +293,6 @@ footer p {
     font-size: 16px;
     line-height: 20px;
 }
-
 footer small{
 	font-size: 16px;
     position: absolute;
@@ -288,13 +303,21 @@ footer small{
 	    border-bottom: 1px dotted rgba(0,0,0,0.1);
 }
 
+@media only screen and ( min-width:769px){
 
 .facebook, .instagram
 {
 	width: 38px;
 	display: inline-block;
 	position: relative;
-	float: right; margin: 4px;
+	float: right;
+    margin: 4px;
+    }
+.social_media {
+	float:right;
+	text-align: right;
+    margin-top: -10px;
+}
 }
 
 {width: 37px;
@@ -302,7 +325,3 @@ footer small{
 	position: relative;
 float: right}
 
-.social_media{
-	float:right;
-	text-align: right;
-}
